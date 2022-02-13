@@ -8,12 +8,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddGrpc();
 
-builder.Services.AddCors(o => o.AddPolicy("AllowAll", builder =>
-{
-    builder.AllowAnyOrigin()
-    .AllowAnyMethod()
-    .AllowAnyHeader();
-}));
+// TODO: uncomment code
+//builder.Services.AddCors(o => o.AddPolicy("AllowAll", builder =>
+//{
+//    builder.AllowAnyOrigin()
+//    .AllowAnyMethod()
+//    .AllowAnyHeader();
+//}));
 
 var app = builder.Build();
 
